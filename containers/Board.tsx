@@ -58,12 +58,12 @@ const Board = () => {
     if (!w && !squares.filter((square) => !square).length) {
       setWinner('BOTH')
     }
-  }, [setWinner, squares])
+  })
 
   return (
     <>
       {!winner && <p>Hey {currentPlayer}, it is your turn!</p>}
-      {winner && winner !== 'BOTH' && <p>Congratulations, {currentPlayer}!</p>}
+      {winner && winner !== 'BOTH' && <p>Congratulations, {winner}!</p>}
       {winner && winner === 'BOTH' && (
         <p>Congratulations, your are both winners!</p>
       )}
